@@ -1,7 +1,6 @@
 var Crawler = require("crawler");
 const htmlToText = require('html-to-text');
 var parse = require('url-parse')
-var waterfall = require('async/waterfall');
 var map = require('async/map');
 var sites = require("./sites");
 
@@ -10,11 +9,6 @@ class ArticlesClass {
     constructor(json) {
         this.json = json;
         this.articles = [];
-    }
-
-    // Getter
-    get data() {
-        return this.data();
     }
 
     // Método
@@ -188,24 +182,4 @@ map(sites, (site, cbm) => {
         console.log(result.length);
     }
 });
-
-
-// var c = new Crawler({
-//     maxConnections : 10,
-//     // This will be called for each crawled page
-//     callback : function (error, res, done) {
-//         if(error){
-//             console.log(error);
-//         }else{
-//             var $ = res.$;
-//             // $ is Cheerio by default
-//             //a lean implementation of core jQuery designed specifically for the server
-//             console.log($("div.xsmall-12.small-12.medium-8.large-8.columns").eq(1).text());
-//         }
-//         done();
-//     }
-// });
-
-// // Queue just one URL, with default callback
-// c.queue('https://www.festo.com/group/es/cms/13591.htm');
 
