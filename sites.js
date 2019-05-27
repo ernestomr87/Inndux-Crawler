@@ -285,7 +285,7 @@ const sites = [
                 "number": 0
             },
             "summary": {
-                "base": 'p',
+                "base": "p",
                 "number": 0
             },
             "body": {
@@ -315,7 +315,7 @@ const sites = [
                 "number": 0
             },
             "summary": {
-                "base": 'p',
+                "base": "p",
                 "number": 0
             },
             "body": {
